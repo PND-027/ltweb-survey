@@ -11,7 +11,8 @@ public class EmailListServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response)
-                          throws ServletException, IOException {
+                          throws ServletException, IOException 
+    {
 
         String url = "/index.html";
 
@@ -33,6 +34,25 @@ public class EmailListServlet extends HttpServlet {
 
             
             User user = new User(firstName, lastName, email);
+            
+            String announce = request.getParameter("announce");
+            String emailOK = request.getParameter("emailOK");
+
+            String announcements = "No";
+            if (announce != null) {
+                announcements = "Yes";
+                if (emailOK != null) {
+                    announcements += " and Email me";
+                }
+            } else if (emailOK != null) {
+                announcements = "Email me";
+            }
+
+            user.setDob(request.getParameter("date"));
+            user.setHeardFrom(request.getParameter("heardFrom"));
+            user.setAnnouncements(announcements);
+            user.setContactVia(request.getParameter("contactVia"));
+
             UserDB.insert(user);
 
             

@@ -9,16 +9,21 @@ h1 {
 }
 label {
     float: left;
-    width: 6em;
+    width: 8em;
     margin-bottom: 0.5em;
 }
-input[type="text"], input[type="email"] {
+label.wide {
+    width: 14em;
+}
+input[type="text"], input[type="email"], input[type="date"] {
     width: 15em;
-    margin-left: 0.5em;    
+    margin-left: 0.5em;
     margin-bottom: 0.5em;
 }
 br {
     clear: both;
 }
 #submit {
-    margin-left: 0.5em; }
+    margin-left: 0;
+}
+

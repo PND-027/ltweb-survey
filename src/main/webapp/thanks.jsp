@@ -8,12 +8,21 @@
 <body>
     <h1>Thanks for joining our email list</h1>
     <p>Here is the information that you entered:</p>
-    <label>Email:</label>
+    <label class="wide">Email:</label>
     <span>${user.email}</span><br>
-    <label>First Name:</label>
+    <label class="wide">First Name:</label>
     <span>${user.firstName}</span><br>
-    <label>Last Name:</label>
+    <label class="wide">Last Name:</label>
     <span>${user.lastName}</span><br>
+    <label class="wide">Date of birth:</label>
+    <span>${user.dob}</span><br>
+    <label class="wide">I want to hear about:</label>
+    <span>${user.heardFrom}</span><br>
+    <label class="wide">Receive announcements?</label>
+    <span>${user.announcements}</span><br>
+    <label class="wide">Contact me by:</label>
+    <span>${user.contactVia}</span><br>
+
 
     <p>To enter another email address, click on the Back
         button in your browser or the Return button shown
